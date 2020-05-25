@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "743538245970",
+    "firebase_url": "https://fazt-2e1c0.firebaseio.com",
+    "project_id": "fazt-2e1c0",
+    "storage_bucket": "fazt-2e1c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:743538245970:android:d7bfe09408181dabb5ba8b",
+        "android_client_info": {
+          "package_name": "com.example.fazt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "743538245970-f92heau2b4jt92m9ogeklplhq1blr3en.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fazt",
+            "certificate_hash": "92a710a1be2d366bf047407095c399aa794bf942"
+          }
+        },
+        {
+          "client_id": "743538245970-cbqrl397d01rh51avh4mdjfgo2jkg005.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrmMgTF1MO6Vn4Ft1dX1omypMve09KnUU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "743538245970-cbqrl397d01rh51avh4mdjfgo2jkg005.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
