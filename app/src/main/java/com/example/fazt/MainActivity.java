@@ -12,14 +12,22 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnRegistrar;
+    private Button btnRegistrar, btnIniciarSesion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnRegistrar = (Button) findViewById(R.id.registrate);
+        btnRegistrar =  findViewById(R.id.registrate);
+        btnIniciarSesion = findViewById(R.id.btn_iniciarsessionMain);
+
+        btnIniciarSesion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                inicioSesion();
+            }
+        });
 
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,5 +42,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    ;
+    public void inicioSesion(){
+        Intent intent = new Intent(this, InicioSesion.class);
+        startActivity(intent);
+    };
 }
