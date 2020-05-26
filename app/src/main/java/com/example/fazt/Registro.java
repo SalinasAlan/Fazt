@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -16,9 +15,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 
-import java.util.regex.Pattern;
 
 public class Registro extends AppCompatActivity {
 
@@ -117,8 +115,13 @@ public class Registro extends AppCompatActivity {
                             } else {
                                 // If sign in fails, display a message to the user.
                                 //Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                                Toast.makeText(Registro.this, "Authentication failed.",
-                                        Toast.LENGTH_SHORT).show();
+                                if (task.getException() instanceof FirebaseAuthUserCollisionException){
+                                    Toast.makeText(Registro.this, "Ya estás registrado",
+                                            Toast.LENGTH_SHORT).show();
+                                }else {
+                                    Toast.makeText(Registro.this, "Registro fallido",
+                                            Toast.LENGTH_SHORT).show();
+                                }
                                 limpiarCampos();
                                 //updateUI(null);
                             }
