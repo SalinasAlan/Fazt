@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Prueba"></activity>
+        <activity
+            android:name=".InicioSesion"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".Prueba" />
         <activity
             android:name=".Registro"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
