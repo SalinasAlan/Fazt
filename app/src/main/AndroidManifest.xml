@@ -10,8 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".MainApp"
+            android:label="@string/title_activity_main_app"></activity>
+        <activity
             android:name=".InicioSesion"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".Prueba" />
         <activity
             android:name=".Registro"
