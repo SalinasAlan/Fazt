@@ -67,7 +67,7 @@ public class InicioSesion extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Toast.makeText(InicioSesion.this, "Inicio de sesión correcto", Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(InicioSesion.this, Prueba.class);
+                            Intent intent = new Intent(InicioSesion.this, MainApp.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             startActivity(intent);
                         } else {
