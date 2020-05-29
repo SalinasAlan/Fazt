@@ -17,7 +17,6 @@ import androidx.navigation.ui.NavigationUI;
 
 public class MainApp extends AppCompatActivity {
 
-    private Button btn_cerrarsesion;
     private FirebaseAuth mAuth;
 
     @Override
@@ -34,23 +33,9 @@ public class MainApp extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 
-        btn_cerrarsesion = findViewById(R.id.btn_cerrarsesion);
 
         mAuth = FirebaseAuth.getInstance();
 
-        btn_cerrarsesion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                cerrarSesion();
-            }
-        });
-    }
 
-    public void cerrarSesion(){
-        FirebaseAuth.getInstance().signOut();
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        Toast.makeText(MainApp.this, "Cierre de sesión correcto", Toast.LENGTH_LONG).show();
     }
-
 }

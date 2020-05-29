@@ -15,7 +15,6 @@
         <activity
             android:name=".InicioSesion"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".Prueba" />
         <activity
             android:name=".Registro"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
